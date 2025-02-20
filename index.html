@@ -21,16 +21,16 @@
     </div>
 
     <script>
-        // JavaScript to handle user input and display responses
+        
         document.getElementById("send_button").addEventListener("click", function () {
             const userInput = document.getElementById("user_input").value;
             if (userInput.trim() === "") return;
 
-            // Add user's message to the chat logs
+            
             const chatLogs = document.getElementById("chatlogs");
             chatLogs.innerHTML += `<div class="user-message">You: ${userInput}</div>`;
 
-            // Send the user's query to the backend
+          
             fetch("/ask", {
                 method: "POST",
                 headers: {
